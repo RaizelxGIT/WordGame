@@ -64,7 +64,7 @@ function enableInput() {
 // Handle user input on Enter
 userInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
-        if (userInput.value.trim() === currentWord) {
+        if (userInput.value.trim().toLowerCase() === currentWord) {
             clearTimeout(timer); // stop timer
             task.textContent = "Superb! 😎";
             level++;
