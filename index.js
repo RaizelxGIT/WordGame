@@ -28,6 +28,7 @@ const words = [
 function start() {
     // Clear old timer if exists
     clearTimeout(timer);
+    enableInput()
 
     // Reset state
     userInput.value = "";
@@ -66,7 +67,7 @@ userInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
         if (userInput.value.trim().toLowerCase() === currentWord) {
             clearTimeout(timer); // stop timer
-            task.textContent = "Superb! 😎";
+            task.textContent = "Superb!";
             level++;
             setTimeout(() => {
                 enableInput();
